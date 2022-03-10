@@ -89,20 +89,20 @@ def app():
     type(davy[0][0])
     #
     def crazy(my_string):    
-    res = my_string.split(',0 ')
-    l = []
-    for i, element in enumerate(res):
-        res[i] = element.split(',')
-        temp_length = len(res[i])
-        res2 = []
-        for j in range(temp_length):
-            #res[i][j] = float(res[i][j])
-            res2.insert(0,float(res[i][j]))
-            
-        if temp_length == 2:    
-            l.append(tuple(res2))
-    pd.DataFrame(l)
-    return l
+        res = my_string.split(',0 ')
+        l = []
+        for i, element in enumerate(res):
+            res[i] = element.split(',')
+            temp_length = len(res[i])
+            res2 = []
+            for j in range(temp_length):
+                #res[i][j] = float(res[i][j])
+                res2.insert(0,float(res[i][j]))
+                
+            if temp_length == 2:    
+                l.append(tuple(res2))
+        pd.DataFrame(l)
+        return l
     #
     final_coor = first_green.T[0].apply(lambda x: crazy(x))
     #
