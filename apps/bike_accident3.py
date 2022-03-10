@@ -3,7 +3,7 @@ import pandas as pd
 import folium
 import geopandas as gpd
 from streamlit_folium import folium_static
-import pickle
+import pickle5 as pickle
 
 def app():
     st.title('1. Accidents - Clusters')
