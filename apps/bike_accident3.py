@@ -15,7 +15,7 @@ def app():
 
 #   create cluster_gdf (=hotspots) 
     #loading df from csv
-    cluster_gdf = pd.read_csv('../raw_data/B_Accident_data/cluster_gdf.csv')
+    cluster_gdf = pd.read_csv('./data/cluster_gdf.csv')
     #turn polygon column into GeoSeries
     cluster_gdf['polygon'] = gpd.GeoSeries.from_wkt(cluster_gdf['polygon'])
     #
